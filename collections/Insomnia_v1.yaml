@@ -1,0 +1,101 @@
+type: collection.insomnia.rest/5.0
+name: laravel-comissao-api
+meta:
+  id: wrk_3c470e631ad9476db4c91c1285301877
+  created: 1751922446708
+  modified: 1751923164113
+  description: ""
+collection:
+  - url: http://localhost:8000/api/sales
+    name: Registrar Comissão e Retornar Valor Calculado
+    meta:
+      id: req_222a09d6e79847be9a0441ccda514b0a
+      created: 1751922446781
+      modified: 1751922759449
+      isPrivate: false
+      description: ""
+      sortKey: -1751922446782
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "valor_total": 1000,
+          "tipo_venda": "afiliada"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8000/api/sales
+    name: Listar Comissões
+    meta:
+      id: req_c79557d91146448d8890de2cb727e428
+      created: 1751922626816
+      modified: 1751922748153
+      isPrivate: false
+      description: ""
+      sortKey: -1751922626816
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8000/api/sales/{% response 'body',
+      'req_222a09d6e79847be9a0441ccda514b0a', 'b64::JC5pZA==::46b', 'never', 60
+      %}
+    name: Deletar Comissão
+    meta:
+      id: req_1a7d14289e5c43f59f71d414d42b666d
+      created: 1751922766739
+      modified: 1751924513603
+      isPrivate: false
+      description: ""
+      sortKey: -1751922446682
+    method: DELETE
+    parameters:
+      - id: pair_5c7dd3f4ffe844cba856d84323a49cf3
+        name: ""
+        value: ""
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_2390beba7d0290b55d5ea0ff65925d05816224f2
+    created: 1751922446716
+    modified: 1751922446716
+environments:
+  name: Base Environment
+  meta:
+    id: env_2390beba7d0290b55d5ea0ff65925d05816224f2
+    created: 1751922446713
+    modified: 1751922446713
+    isPrivate: false
