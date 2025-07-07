@@ -42,7 +42,7 @@ curl --request DELETE \
   --header 'User-Agent: insomnia/11.2.0'
 ```
 
-## Descisão de Ambiquidade
+## Decisão de Ambiquidade
 
 Foi utilizado o uuid para registro das informações tornando cada registro único.
 
