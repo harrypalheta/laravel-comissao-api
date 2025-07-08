@@ -46,3 +46,8 @@ curl --request DELETE \
 
 Foi utilizado o uuid para registro das informações tornando cada registro único.
 
+## Testes unitários
+
+```sh
+php artisan test
+```
